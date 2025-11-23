@@ -1,0 +1,34 @@
+1. Login API
+Endpoint: POST /login
+Validation:
+Valid credentials → Response 200 OK, JSON contains token.
+Invalid credentials → Response 401 Unauthorized, JSON contains error message.
+Empty fields → Response 400 Bad Request.
+
+2. Product Catalog API
+Endpoint: GET /products
+Validation:
+Response 200 OK.
+JSON contains product list with fields: id, name, price, image.
+Verify product count matches UI.
+
+3. Cart API
+Endpoint: POST /cart/add
+Validation:
+Adding product → Response 200 OK, JSON shows updated cart.
+Invalid product ID → Response 404 Not Found.
+Quantity update → Response reflects correct total.
+
+4. Checkout API
+Endpoint: POST /checkout
+Validation:
+Valid cart → Response 200 OK, JSON contains orderId.
+Empty cart → Response 400 Bad Request.
+Payment simulation → Response contains status: success.
+
+5. Notifications API
+Endpoint: GET /notifications
+Validation:
+Response 200 OK.
+JSON contains id, title, message, deeplink.
+Verify notification count matches UI.

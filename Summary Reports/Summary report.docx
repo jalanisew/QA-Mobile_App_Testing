@@ -1,0 +1,47 @@
+1. Introduction
+App under test: E‑Commerce Demo (Android)
+Version: v.3.2.0
+Platform: Android (Samsung Galaxy M21 – Android 13, Pixel Emulator – Android 14)
+Objective: Validate functional, UI, interrupt, and API behavior of core features (login, profile, catalog, cart, checkout, notifications, permissions).
+Scope: Manual testing with API validation (Postman), defect tracking (Jira), documentation (Excel + GitHub).
+
+2. Test Coverage
+Total Scenarios: 25
+Total Test Cases: 25 (1 per scenario)
+Modules Covered: Installation, Launch, Login, Profile, Catalog, Cart, Checkout, Notifications, Permissions, Interrupts, UI, Accessibility.
+
+3. Execution Results
+Total test cases: 25
+Passed: 16
+Failed: 9
+
+4. Defect Summary
+Critical: 2
+Major: 4
+Minor: 3
+
+5. API Validation Results
+Login API: Valid credentials returned 200 OK with token; invalid login returned 401 Unauthorized.
+Product Catalog API: GET /products returned correct product list; count matched UI.
+Cart API: POST /cart/add worked, but quantity update did not reflect in DB (linked to BUG‑03).
+Checkout API: POST /checkout returned 200 OK with orderId, but allowed empty cart (BUG‑04).
+Notifications API: GET /notifications returned list, but deeplink mismatch (BUG‑05).
+
+6. Risks & Limitations
+Limited device coverage (only Android tested, no iOS).
+Demo app does not support real payment gateways.
+Backend DB not accessible → SQL validations documented as sample queries only.
+Push notifications simulated, not real server‑driven.
+
+7. Recommendations
+Fix cart calculation logic and checkout validation.
+Improve error handling for login and profile inputs.
+Enhance UI responsiveness for smaller screens and accessibility scaling.
+Ensure notification deeplink consistency.
+Add regression testing after fixes.
+
+8. Conclusion
+Testing of the E‑Commerce Demo app covered functional, UI, interrupt, and API validation.
+16/25 test cases passed successfully.
+9 defects identified (2 critical, 4 major, 3 minor).
+The app is functional for demo purposes, but improvements are needed in cart, checkout, and notification handling.

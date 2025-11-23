@@ -1,0 +1,89 @@
+1. Introduction
+App under test: Solodroid E‑Commerce Demo (Android)
+Version: 3.2.0
+Platform: Android (tested on physical device + emulator)
+Objective: Validate functional, UI, and API behavior of core features (login, profile, cart, checkout, notifications, permissions).
+Scope: Manual testing with backend/API validation using Postman, defect tracking in Jira, documentation in GitHub.
+
+
+2. Test Objectives
+Verify installation and compatibility across Android versions.
+Validate functional flows: login, profile management, product browsing, cart, checkout.
+Check UI consistency: layout, responsiveness, accessibility.
+Test interrupt handling: calls, SMS, background/foreground transitions.
+Validate API responses for login, product catalog, cart, and checkout endpoints.
+Identify and log defects in Jira, summarize in Bug‑Report.xlsx.
+
+
+3. Test Scope
+In Scope
+Functional testing (login, profile, cart, checkout, notifications).
+UI testing (alignment, fonts, colors, responsiveness).
+Interrupt testing (network loss, background/foreground).
+API validation (Postman).
+Defect tracking (Jira + Excel export).
+
+Out of Scope
+Performance benchmarking (load/stress).
+Security testing (penetration, encryption).
+iOS testing.
+Payment gateway integration (demo only).
+
+
+4. Test Environment
+Devices:
+Samsung Galaxy M21
+Pixel Emulator 
+
+Tools:
+Jira (defect tracking)
+Postman (API validation)
+VS Code (documentation)
+
+Network: mobile data.
+
+
+5. Test Deliverables
+Test Scenarios.xlsx 
+Test Cases.xlsx 
+Bug‑Report.xlsx 
+API‑Validation 
+Evidence folder 
+Test Summary Report 
+
+
+6. Test Approach
+Manual functional testing → Execute scenarios step by step.
+UI validation → Compare against design guidelines (alignment, color, font).
+Interrupt testing → Simulate calls, SMS, background/foreground.
+API validation → Use Postman to check endpoints (status codes, payloads).
+Defect logging → Record in Jira, export to Excel for repo.
+Traceability → Map requirements → scenarios → cases → bugs.
+
+
+7. Entry & Exit Criteria
+Entry: App installed, environment ready, test data prepared.
+Exit: All planned test cases executed, defects logged, summary report prepared.
+
+
+8. Risks & Mitigation
+Risk: Limited device coverage → Mitigation: use emulator + physical device.
+Risk: Demo app may not support real payments → Mitigation: document limitation in README.
+Risk: No backend DB access → Mitigation: include sample SQL queries for recruiter visibility.
+
+
+9. Schedule
+Week 1: Test plan, scenarios, cases.
+Week 2: Execute tests, log bugs, API validation.
+Week 3: Evidence collection, summary report, repo polish.
+
+
+10. Approval
+Prepared by: Jalani Sewmini
+Reviewed by: Self
+Approved by: Self
+
+
+
+
+

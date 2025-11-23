@@ -1,0 +1,17 @@
+-- Login Validation
+SELECT * FROM users WHERE email = 'testuser@example.com';
+
+-- Profile Update Validation
+SELECT name FROM users WHERE user_id = 200;
+
+-- Product Catalog Validation
+SELECT product_id, name, price FROM products WHERE category = 'Dress';
+
+-- Cart Validation
+SELECT product_id, quantity, total_price FROM cart WHERE user_id = 200;
+
+-- Checkout Validation
+SELECT order_id, status, total_amount FROM orders WHERE user_id = 200 ORDER BY order_date DESC;
+
+-- Notifications Validation
+SELECT title, message, deeplink FROM notifications WHERE user_id = 200;
